@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,7 +34,7 @@ public class EmployeeController {
 		}
 		else
 		{
-			throw new Exception("Employee not found"); 
+			throw new EmployeeServiceApplication.EmployeeNotFoundException(); 
 		}
 		
 	}
@@ -48,6 +49,28 @@ public class EmployeeController {
 		
 	}
 	
+	@PutMapping("/{id}")
+	@ApiOperation(value = "Edit Employee", response = Employee.class ,nickname = "Edit Employee")
+	public Employee putEmployee( @PathVariable("id") int employee_id, @RequestBody Employee e) throws Exception {
+		
+		if(null != Employee.employeeMap.get(employee_id))
+		{
+	
+			
+			 e = Employee.editEmployee(e,employee_id);
+			System.out.println(e);
+			
+			return e ;
+			
+		}
+		else
+		{
+			throw new EmployeeServiceApplication.EmployeeDoesNotExistException(); 
+		}
+		
+	
+	}
+	
 	@DeleteMapping(value = "/{id}")
 	@ApiOperation(value = "Delete Employee", response = String.class ,nickname = "Delete Employee")
 	public String deleteEmployee(@PathVariable("id") int id ) throws Exception {
@@ -58,11 +81,12 @@ public class EmployeeController {
 		}
 		else
 		{
-			throw new Exception("Employee not found"); 
+			throw new EmployeeServiceApplication.EmployeeAlreadyDeletedException(); 
 		}
 		
 		
 	}
+	
 	
 	
 }
