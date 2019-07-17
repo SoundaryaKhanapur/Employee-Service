@@ -79,6 +79,33 @@ public class Employee {
 		
 		return e;
 	}
+	
+	
+	public static Employee editEmployee(Employee e,int employee_id) throws Exception
+	{
+		
+			if(e.employee_type.equals(Type.SOFTWARE_DEVELOPER) && (null == employeeMap.get(e.manager_id) ))
+			{
+				throw new Exception("Manager not found!");
+				
+			}
+			else if(e.employee_type.equals(Type.SITE_ADMIN) && e.manager_id != 0) {
+				
+				throw new Exception("Site Admin does not have a Manager");
+				
+			}
+	
+			employeeMap.put(e.id, e);
+			
+			return e;
+		
+		
+		
+		
+	}
+	
+	
+	
 
 	@Override
 	public String toString() {
