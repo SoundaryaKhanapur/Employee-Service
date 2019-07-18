@@ -40,18 +40,5 @@ public class EmployeeServiceApplication {
                 .build();
     }
     
-    @ResponseStatus(value=HttpStatus.NOT_FOUND, reason="Employee Not Found")  // 404
-    public static class EmployeeNotFoundException extends RuntimeException {
-        
-    }
-    
-    @ResponseStatus(value=HttpStatus.NOT_FOUND, reason="Looks like Employee is already deleted or does not exist")  // 404
-    public static class EmployeeAlreadyDeletedException extends RuntimeException {
-        
-    }
-    
-    @ResponseStatus(value=HttpStatus.NOT_FOUND, reason="Employee does not exist")  // 404
-    public static class EmployeeDoesNotExistException extends RuntimeException {
-        
-    }
+  
 }
