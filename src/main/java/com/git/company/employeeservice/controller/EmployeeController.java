@@ -53,7 +53,7 @@ public class EmployeeController {
 	
 	
 	@PutMapping("/")
-public Employee Employee(@RequestBody Employee e) throws Exception {
+public Employee editEmployee(@RequestBody Employee e) throws Exception {
 		
 		return employeeService.editEmployee(e);		
 	
