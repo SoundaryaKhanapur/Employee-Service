@@ -5,10 +5,13 @@ The whole project is integrated with Swagger UI for documentation and API testin
 ## How to Build and Run :
 
 Download the project zip or clone URI. You can either import the extracted project into an IDE (Eclipse, STS etc) or directly build using MAVEN.
+
 Goal: clean install (In IDE run configuration)
+
 MAVEN: mvn clean install
 
 Once build, you can run the application by running the jar generated in target folder : "employee-service-0.0.1-SNAPSHOT-spring-boot.jar"
+
 Command to Run : **java -jar "employee-service-0.0.1-SNAPSHOT-spring-boot.jar"**
 
 The service will start on port 9765. Optionally you can also provide the host port using -Dport at command line or in vm arguments.
