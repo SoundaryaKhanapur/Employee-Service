@@ -2,7 +2,7 @@
 You can create, edit, get and delete the employee's. Employee's are categorized into MANAGER, SOFTWARE_DEVELOPER, SITE_ADMIN and CONTRACTOR. Further, MANAGER is a must for SOFTWARE_DEVELOPER and SITE_ADMIN's cant have Manager.
 The whole project is integrated with Swagger UI for documentation and API testing.
 
-# # How to Build and Run :
+## How to Build and Run :
 
 Download the project zip or clone URI. You can either import the extracted project into an IDE (Eclipse, STS etc) or directly build using MAVEN.
 Goal: clean install (In IDE run configuration)
