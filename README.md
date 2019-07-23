@@ -12,7 +12,7 @@ MAVEN: mvn clean install
 
 Once built, you can run the application by running the jar generated in target folder : "employee-service-0.0.1-SNAPSHOT-spring-boot.jar"
 
-Command to Run : **java -jar "employee-service-0.0.1-SNAPSHOT-spring-boot.jar"**
+Command to Run : java -jar "employee-service-0.0.1-SNAPSHOT-spring-boot.jar
 
 The service will start on port 9765. Optionally you can also provide the host port using -Dport at command line or in vm arguments.
 
