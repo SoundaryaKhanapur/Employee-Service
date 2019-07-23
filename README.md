@@ -18,4 +18,4 @@ The service will start on port 9765. Optionally you can also provide the host po
 
 Once the Spring boot service starts, you can navigate to **Swagger** UI for service info : **http://localhost:9765/swagger-ui.html**
 
-
+One more thing, here we haven't coded for interface as there is only one implementation of employee service and repository
