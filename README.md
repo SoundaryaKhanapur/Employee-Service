@@ -1,6 +1,6 @@
 # Employee Service - API's for employee management.
 You can create, edit, get and delete the employee's. Employee's are categorized into MANAGER, SOFTWARE_DEVELOPER, SITE_ADMIN and CONTRACTOR. Further, MANAGER is a must for SOFTWARE_DEVELOPER and SITE_ADMIN's cant have Manager.
-The whole project is integrated with Swagger UI for documentation and API testing.
+The whole project is integrated with Swagger UI for documentation and API testing. Also appropriate response code for API's are configured. 
 
 ## How to Build and Run :
 
@@ -18,4 +18,3 @@ The service will start on port 9765. Optionally you can also provide the host po
 
 Once the Spring boot service starts, you can navigate to **Swagger** UI for service info : **http://localhost:9765/swagger-ui.html**
 
-One more thing, here we haven't coded for interface as there is only one implementation of employee service and repository
