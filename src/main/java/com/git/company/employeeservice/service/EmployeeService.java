@@ -1,5 +1,7 @@
 package com.git.company.employeeservice.service;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -18,7 +20,7 @@ import io.swagger.annotations.ApiOperation;
 @Service
 public class EmployeeService {
 	
-	private static int count;
+	private static AtomicInteger count = new AtomicInteger(0);
 	public EmployeeService(EmployeeRepository repository) {
 		this.repository = repository;
 		
@@ -62,7 +64,7 @@ public class EmployeeService {
 		}
 		
 		
-		e.setId(++count);
+		e.setId(count.addAndGet(1));
 		repository.addEmployee(e);
 		
 		return e;
